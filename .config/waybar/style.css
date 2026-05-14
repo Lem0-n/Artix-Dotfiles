@@ -1,0 +1,204 @@
+@define-color background rgba(33, 33, 33, 0.65);
+@define-color background-light #3a3a3a;
+@define-color foreground #e0e0e0;
+@define-color black #5a5a5a;
+@define-color red #ff9a9e;
+@define-color green #b5e8a9;
+@define-color yellow #ffe6a7;
+@define-color blue #b3e5fc;
+@define-color magenta #dda0dd;
+@define-color cyan #a3e8e8;
+@define-color white #ffffff;
+@define-color orange #ff8952;
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "Iosevka NFM";
+    font-size: 14px;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: @background;
+    color: @foreground;
+}
+
+#mode,
+#custom-count-updates,
+#custom-hardware-wrap,
+#custom-session-wrap,
+#clock,
+#cpu,
+#memory,
+#temperature,
+#battery,
+#network,
+#pulseaudio,
+#wireplumber,
+#backlight,
+#disk,
+#power-profiles-daemon,
+#idle_inhibitor,
+#tray {
+    padding: 0 10px;
+    margin: 0 2px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: transparent;
+}
+
+#workspaces button {
+    padding: 0 10px;
+    margin: 0;
+    background-color: transparent;
+    color: @foreground;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+#workspaces button:hover {
+    background: @background-light;
+    border-color: @red;
+    color: @red;
+}
+
+#workspaces button.active {
+    background-color: transparent;
+    border-color: @cyan;
+    color: @cyan;
+    font-weight: bold;
+}
+
+#workspaces button.urgent {
+    background-color: @red;
+    border-color: @black;
+    color: @black;
+}
+
+#mode {
+    color: @orange;
+    border-color: @orange;
+}
+
+#custom-count-updates {
+    color: @green;
+    border-color: @green;
+}
+
+#clock {
+    color: @blue;
+    border-color: @blue;
+}
+
+#cpu {
+    color: @red;
+    border-color: @red;
+}
+
+#memory {
+    color: @magenta;
+    border-color: @magenta;
+}
+
+#temperature {
+    color: @yellow;
+    border-color: @yellow;
+}
+
+#temperature.critical {
+    color: @red;
+    border-color: @red;
+}
+
+#power-profiles-daemon {
+    color: @cyan;
+    border-color: @cyan;
+}
+
+#power-profiles-daemon.performance {
+    color: @red;
+    border-color: @red;
+}
+
+#power-profiles-daemon.balanced {
+    color: @yellow;
+    border-color: @yellow;
+}
+
+#power-profiles-daemon.power-saver {
+    color: @green;
+    border-color: @green;
+}
+
+#battery {
+    color: @cyan;
+    border-color: @cyan;
+}
+
+#battery.charging,
+#battery.plugged {
+    color: @green;
+    border-color: @green;
+}
+
+#battery.warning:not(.charging) {
+    color: @yellow;
+    border-color: @yellow;
+}
+
+#battery.critical:not(.charging) {
+    color: @red;
+    border-color: @red;
+}
+
+#network {
+    color: @blue;
+    border-color: @blue;
+}
+
+#network.disconnected {
+    color: @red;
+    border-color: @red;
+}
+
+#pulseaudio {
+    color: @orange;
+    border-color: @orange;
+}
+
+#pulseaudio.muted {
+    color: @red;
+    border-color: @red;
+}
+
+#wireplumber {
+    color: @orange;
+    border-color: @orange;
+}
+
+#wireplumber.muted {
+    color: @red;
+    border-color: @red;
+}
+
+#backlight {
+    color: @yellow;
+    border-color: @yellow;
+}
+
+#disk {
+    color: @cyan;
+    border-color: @cyan;
+}
+
+#idle_inhibitor {
+    color: @foreground;
+    border-color: transparent;
+}
+
+#idle_inhibitor.activated {
+    color: @red;
+    border-color: @red;
+}

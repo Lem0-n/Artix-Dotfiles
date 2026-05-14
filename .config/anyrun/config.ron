@@ -1,0 +1,16 @@
+Config(
+  x: Fraction(0.5),
+  y: Fraction(0.3),
+
+  width: Fraction(0.3),
+
+  hide_at_start: false,
+  ignore_exclusive_zones: false,
+  layer: Overlay,
+  hide_on_clicked: true,
+  plugins: [
+    "libapplications.so",
+    "libshell.so",
+    "libwebsearch.so",
+  ],
+)
